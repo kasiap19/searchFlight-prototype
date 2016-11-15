@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Businesso - Your business travels organized.</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+   <!--  <link href="css/demo.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container wraper">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          <p class="logoTxtProfile">
+            <img src="img/paper-airplane-icon.png" alt="businesso_logo"> Businesso
+          </p>
+        </a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user welcomeUser"></span> <span id="displayedUser"></span></a></li>
+        <li>
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+            <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+              <li><a href="#"data-toggle="modal" data-target="#myModal">My Profile</a></li>
+              <li><a href="index.html" id="logOutBtn" >Log Out</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul> <!-- end of the right nav bar -->
+    </div>
+      </nav> <!-- Navigation END -->
+
+    <div class="container" id="content">
+      <div id="search">
+      <div class="row">
+        <div class="col-lg-12 title">
+          <br><br>
+          <h3>WHERE TO GO?</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-offset-4">
+          <!-- return -->
+          <div id="return">
+            <input type="checkbox" id="returnOn" checked> return <br><br>
+                        <div class="form-group">
+                            <!-- departure -->
+                             <div class="inner-addon left-addon">
+                              <img src="img/departures.png" class="glyphicon">
+                              <input type="text" id="demo1" class="form-control" placeholder="FROM"/>
+                          </div>
+                        </div>
+                      <div class="form-group">
+                         <!-- arrival -->
+                             <div class="inner-addon left-addon">
+                              <img src="img/arrival.png" class="glyphicon">
+                              <input type="text" id="demo2" class="form-control" placeholder="TO"/>
+                          </div>
+                        </div>
+                    <form class="form-inline">
+                        <div class="form-group">
+                             <!-- departure date -->
+                             <div class="inner-addon left-addon">
+                              <img src="img/calendar.png" class="glyphicon">
+                                <input id="depart" class="datepicker form-control"  placeholder="dd/mm/yy " style="width:150px; height:55px;">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                             <!-- arrival date -->
+                             <div class="inner-addon left-addon">
+                              <img src="img/calendar.png" class="glyphicon">
+                                <input id="arrive" class="datepicker form-control"  placeholder="dd/mm/yy " style="width:150px;height:55px;">
+                            </div>
+                        </div>
+                         <!-- passangers -->
+                        <div class="form-group" style="margin-left:0px;">
+                            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                                <select class="selectpicker">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                </select>
+                            </label>
+                        </div>
+                    </form><br>
+                    <div class="form-group">
+                      <button type="button" class="btn form-control searchBtn" id="searchBtn">SEARCH</button>
+                    </div>
+            </div>
+          <!-- one way -->
+          <div id="oneWay"  style="display:none;">
+            <input type="checkbox" id="returnOff">return <br><br>
+                        <div class="form-group">
+                            <!-- departure -->
+                             <div class="inner-addon left-addon">
+                              <img src="img/departures.png" class="glyphicon">
+                              <input type="text" id="demo3" class="form-control" placeholder="FROM"/>
+                          </div>
+                        </div>
+                      <div class="form-group">
+                         <!-- arrival -->
+                             <div class="inner-addon left-addon">
+                              <img src="img/arrival.png" class="glyphicon">
+                              <input type="text"id="demo4" class="form-control" placeholder="TO"/>
+                          </div>
+                        </div>
+                    <form class="form-inline">
+                        <div class="form-group">
+                             <!-- departure date -->
+                             <div class="inner-addon left-addon">
+                              <img src="img/calendar.png" class="glyphicon">
+                                <input id="depart" class="datepicker form-control" placeholder="dd/mm/yy " style="width:150px; height:55px;">
+                            </div>
+                        </div>
+                         <!-- passangers -->
+                        <div class="form-group" style="margin-left:0px;">
+                            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                                <select class="selectpicker">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                </select>
+                            </label>
+                        </div>
+                    </form>
+                <br>
+                 <!-- search btn -->
+                <button type="button" class="btn form-control searchBtn">SEARCH</button>
+                 </div><!-- end of return-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <br><br><br>
+
+      <!-- search results -->
+      <div class="container results" id="results">
+        <!-- breadcrumb -->
+        <div id="results" class="" style="margin-top: 50px;">
+          <ol class="breadcrumb breadcrumb-arrow">
+            <li><a href="#">Search</a></li>
+            <li class="active"><span>Select Flight</span></li>
+            <li class="active" style="opacity: 0.5"><span>Overview</span></li>
+          </ol>
+        </div>
+        <!-- go back btn -->
+        <div class="col-xs-2">
+          <div class="btn btn-info" id="backToSearchBtn">
+            Go Back
+          </div>
+        </div>
+        <!-- sort by -->
+        <div class="col-xs-1 col-xs-offset-4 center">
+          <label>SORT BY:</label>
+        </div>
+        <!-- sort -> select -->
+        <div class="col-xs-2">
+          <select class="form-control" style="margin-top: -8px;">
+            <option>Best Match</option>
+            <option>Price: Ascending</option>
+            <option>Price: Descending</option>
+          </select>
+        </div>
+        <!-- change preferences -->
+        <div class="col-xs-3">
+          <span class="glyphicon glyphicon-cog"></span>
+          <span>CHANGE PREFERECES</span>
+        </div>
+      </div> <!-- end of the search results -->
+      <br>
+      <!-- choose flights header section begin -->
+      <div class="container-fluid">
+        <!-- choose flights header section begin -->
+    <div class="chooseFlight"  id="chooseFlight">
+      <div class="col-xs-10 col-xs-offset-1">
+        <h3>Choose Flights</h3>
+      </div>
+      <!-- search combination begin -->
+      <div class="row flight-section">
+        <div class="col-xs-10 col-xs-offset-1" style="border: 2px solid black;">
+          <div class="row">
+            <div class="col-xs-12" id="blue">
+
+                <div class="col-lg-1">
+                    <img src="img/departures.png" alt="plane_logo_departure">
+                </div>
+
+                <div class="col-lg-3">
+                    <p>CPH - BCN</p>
+                </div>
+                <div class="col-lg-3">
+                  <img src="img/calendar.png" style="width: 16px;" alt="calendar_logo"/><span> 14/10/2016 </span>
+                 </div>
+
+                 <div class="col-lg-3">
+                  <img src="img/clock.png" style="width: 16px;" alt="clock_logo"/><span> 10:35 </span>
+                 </div>
+
+                <div class="col-lg-2 ">
+                    <p style="font-weight: bold">225 DKK</p>
+                </div>
+
+            </div>
+          </div>
+
+          <div class="row" style="border-top: 2px solid black">
+            <div class="col-lg-12" id="blue">
+                <div class="col-lg-1">
+                    <img src="img/arrival.png" alt="plane_logo_arrival">
+                </div>
+
+                <div class="col-lg-3">
+                    <p>BCN - CPH</p>
+                </div>
+                <div class="col-lg-3">
+                  <img src="img/calendar.png" style="width: 16px;" alt="calendar_logo"/><span> 18/10/2016 </span>
+                 </div>
+
+                 <div class="col-lg-3">
+                  <img src="img/clock.png" style="width: 16px;" alt="clock_logo"/><span> 21:35 </span>
+                 </div>
+
+                <div class="col-lg-2">
+                    <p style="font-weight: bold">225 DKK</p>
+                </div>
+
+            </div>
+          </div>
+
+        </div> <!-- col -->
+        <div class="row">
+          <div class="col-xs-2 col-xs-offset-9">
+            <button type="button" class="btn btn-info btn-select" >Select</button>
+          </div>
+        </div>
+      </div> <!-- row -->
+      <!-- search combination begin -->
+      <div class="row flight-section">
+        <div class="col-xs-10 col-xs-offset-1" style="border: 2px solid black;">
+          <div class="row">
+            <div class="col-xs-12" id="blue">
+
+                <div class="col-lg-1">
+                    <img src="img/departures.png" alt="plane_logo_departure">
+                </div>
+
+                <div class="col-lg-3">
+                    <p>CPH - BCN</p>
+                </div>
+                <div class="col-lg-3">
+                  <img src="img/calendar.png" style="width: 16px;" alt="calendar_logo"/><span> 14/10/2016 </span>
+                 </div>
+
+                 <div class="col-lg-3">
+                  <img src="img/clock.png" style="width: 16px;" alt="clock_logo"/><span> 10:35 </span>
+                 </div>
+
+                <div class="col-lg-2 ">
+                    <p style="font-weight: bold">225 DKK</p>
+                </div>
+
+            </div>
+          </div>
+
+          <div class="row" style="border-top: 2px solid black">
+            <div class="col-lg-12" id="blue">
+                <div class="col-lg-1">
+                    <img src="img/arrival.png" alt="plane_logo_arrival">
+                </div>
+
+                <div class="col-lg-3">
+                    <p>BCN - CPH</p>
+                </div>
+                <div class="col-lg-3">
+                  <img src="img/calendar.png" style="width: 16px;" alt="calendar_logo"/><span> 18/10/2016 </span>
+                 </div>
+
+                 <div class="col-lg-3">
+                  <img src="img/clock.png" style="width: 16px;" alt="clock_logo"/><span> 21:35 </span>
+                 </div>
+
+                <div class="col-lg-2">
+                    <p style="font-weight: bold">225 DKK</p>
+                </div>
+
+            </div>
+          </div>
+
+        </div> <!-- col -->
+        <div class="row">
+          <div class="col-xs-2 col-xs-offset-9">
+            <button type="button" class="btn btn-info btn-select">Select</button>
+          </div>
+        </div>
+      </div> <!-- row -->
+      <!-- search combination begin -->
+      <div class="row flight-section">
+        <div class="col-xs-10 col-xs-offset-1" style="border: 2px solid black;">
+          <div class="row">
+            <div class="col-xs-12" id="blue">
+
+                <div class="col-lg-1">
+                    <img src="img/departures.png" alt="plane_logo_departure">
+                </div>
+
+                <div class="col-lg-3">
+                    <p>CPH - BCN</p>
+                </div>
+                <div class="col-lg-3">
+                  <img src="img/calendar.png" style="width: 16px;" alt="calendar_logo"/><span> 14/10/2016 </span>
+                 </div>
+
+                 <div class="col-lg-3">
+                  <img src="img/clock.png" style="width: 16px;" alt="clock_logo"/><span> 10:35 </span>
+                 </div>
+
+                <div class="col-lg-2 ">
+                    <p style="font-weight: bold">225 DKK</p>
+                </div>
+
+            </div>
+          </div>
+
+          <div class="row" style="border-top: 2px solid black">
+            <div class="col-lg-12" id="blue">
+                <div class="col-lg-1">
+                    <img src="img/arrival.png" alt="plane_logo_arrival">
+                </div>
+
+                <div class="col-lg-3">
+                    <p>BCN - CPH</p>
+                </div>
+                <div class="col-lg-3">
+                  <img src="img/calendar.png" style="width: 16px;" alt="calendar_logo"/><span> 18/10/2016 </span>
+                 </div>
+
+                 <div class="col-lg-3">
+                  <img src="img/clock.png" style="width: 16px;" alt="clock_logo"/><span> 21:35 </span>
+                 </div>
+
+                <div class="col-lg-2">
+                    <p style="font-weight: bold">225 DKK</p>
+                </div>
+
+            </div>
+          </div>
+
+        </div> <!-- col -->
+        <div class="row">
+          <div class="col-xs-2 col-xs-offset-9">
+            <button type="button" class="btn btn-info btn-select">Select</button>
+          </div>
+        </div>
+      </div> <!-- row -->
+      </div>
+
+    <!-- footer -->
+      <div class="panel-footer">
+        <p style="text-align:center; padding:15px;">Copyright &copy; Businesso 2016 Copenhagen</p>
+        <div id="footer" style="margin-top:-20px;">
+            <a href="#"> Contact </a>|
+            <a href="#"> FAQ </a>|
+            <a href="#"> About </a>
+        </div>
+    </div>
+    </div>
+
+  <!-- Modal for displaying user's info -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">MY PROFILE</h4>
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered">
+          <th>Name</th>
+          <th>Username</th>
+          <th>Password</th>
+          <tr>
+            <td id="displayedName"></td>
+            <td id="displayedEmail">3</td>
+            <td id="displayedPass"></td>
+          </tr>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" id="closeBtn">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+ <script src="js/script.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Businesso - Your business travels organized.</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container wraper">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          <p class="logoTxtProfile">
+            <img src="img/paper-airplane-icon.png" alt="businesso_logo"> Businesso
+          </p>
+        </a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user welcomeUser"></span> <span id="displayedUser"></span></a></li>
+        <li>
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+            <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+              <li><a href="#"data-toggle="modal" data-target="#myModal">My Profile</a></li>
+              <li><a href="index.html" id="logOutBtn" >Log Out</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul> <!-- end of the right nav bar -->
+    </div>
+      </nav> <!-- Navigation END --> <br><br><br>
+ <!-- search results -->
+      <div class="container" id="">
+        <!-- breadcrumb -->
+        <div class="container" style="margin-top: 50px;">
+          <ol class="breadcrumb breadcrumb-arrow">
+          <li><a href="#">Search</a></li>
+          <li><a href="#">Select Flight</a></li>
+          <li class="active"><span>Overview</span></li>
+        </ol>
+        <div class="btn btn-info" id="backToSearchResultsBtn">
+          Go Back
+        </div>
+
+      </div> <!-- end of the search results -->
+      <br>
+
+
+          <!-- DEPARTURES-->
+<div class="row">
+    <div class="col-lg-10 col-lg-offset-1 text-right" id="edit">
+        <p>Edit</p>
+    </div>
+    <div class="col-lg-10 col-lg-offset-1 " id="blue">
+
+        <div class="col-lg-1">
+            <img src="img/departures.png" alt="plane_logo_departure">
+        </div>
+
+        <div class="col-lg-3">
+            <p>CPH - BCN</p>
+        </div>
+
+        <div class="col-lg-2 col-lg-offset-6">
+            <p>225 Dkk</p>
+        </div>
+
+    </div>
+</div>
+
+<div class="row" id="grey">
+    <div class="col-lg-10 col-lg-offset-1">
+        <div class="col-lg-3">
+            <div>
+                <img src="img/calendar.png" alt="calendar_logo" /><span>Departure: 9/10/2016 </span>
+            </div>
+        </div>
+
+        <div class="col-lg-3">
+            <div>
+                <img src="img/clock.png" alt="clock_logo" /><span> 12:35 </span>
+            </div>
+        </div>
+
+        <div class="col-lg-3">
+            <div>
+                <img src="img/cutlery.png" alt="cutlery_logo" /><span> Vegetarian food </span> <br/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row" id="grey">
+    <div class="col-lg-10 col-lg-offset-1">
+        <div class="col-lg-3">
+            <div>
+                <img src="img/calendar.png" alt="calendar_logo" /><span>Ariival 9/10/2016 </span>
+            </div>
+        </div>
+
+        <div class="col-lg-3">
+            <div>
+                <img src="img/clock.png" alt="clock_logo" /><span> 14:35 </span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END OF DEPARTURES -->
+
+<div class="col-lg-12 flight_separator"></div>
+
+<!-- ARRIVALS-->
+<div class="row">
+    <div class="col-lg-10 col-lg-offset-1" id="blue">
+        <div class="col-lg-1">
+            <img src="img/arrival.png" alt="plane_logo_arrival">
+        </div>
+
+        <div class="col-lg-3">
+            <p>BCN - CPH</p>
+        </div>
+
+        <div class="col-lg-2 col-lg-offset-6">
+            <p>225 Dkk</p>
+        </div>
+
+    </div>
+</div>
+
+<div class="row" id="grey">
+    <div class="col-lg-8 col-lg-offset-1">
+        <div class="col-lg-3">
+            <div>
+                <img src="img/calendar.png" alt="calendar_logo" /><span>Departure: 14/10/2016 </span>
+            </div>
+        </div>
+
+        <div class="col-lg-3">
+            <div>
+                <img src="img/clock.png" alt="clock_logo" /><span> 10:35 </span>
+            </div>
+        </div>
+
+        <div class="col-lg-3">
+            <div>
+                <img src="img/cutlery.png" alt="cutlery_logo" /><span> Seafood </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row" id="grey">
+    <div class="col-lg-8 col-lg-offset-1">
+        <div class="col-lg-3">
+            <div>
+                <img src="img/calendar.png" alt="calendar_logo" /><span>Arrival: 14/10/2016 </span>
+            </div>
+        </div>
+
+        <div class="col-lg-3">
+            <div>
+                <img src="img/clock.png" alt="clock_logo" /><span> 12:35 </span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END OF ARRIVALS -->
+
+<div class="col-lg-12 flight_separator"></div>
+
+<!-- ACCOMMODATION -->
+<div class="row">
+    <div class="col-lg-10 col-lg-offset-1 " id="blue">
+        <div class="col-lg-1">
+            <img src="img/house-outline.png" alt="accommodation_logo">
+        </div>
+
+        <div class="col-lg-3">
+            <p>Barcelona City Hostel</p>
+        </div>
+
+        <div class="col-lg-2 col-lg-offset-6">
+            <p>525 Dkk</p>
+        </div>
+
+    </div>
+</div>
+
+<div class="row" id="grey">
+    <div class="col-lg-8 col-lg-offset-1">
+        <div class="col-lg-3">
+            <div>
+                <img src="img/calendar.png" alt="calendar_logo" /><span>Check-in: 9/10/2016 </span>
+            </div>
+        </div>
+
+        <div class="col-lg-3">
+            <div>
+                <img src="img/clock.png" alt="clock_logo" /><span> 12:35 </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row" id="grey">
+    <div class="col-lg-8 col-lg-offset-1">
+        <div class="col-lg-3">
+            <div>
+                <img src="img/calendar.png" alt="calendar_logo" /><span>Check-out 14/10/2016 </span>
+            </div>
+        </div>
+
+        <div class="col-lg-3">
+            <div>
+                <img src="img/clock.png" alt="clock_logo" /><span> 08:30 </span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-lg-12">
+    <hr/>
+</div>
+<div class="row">
+    <div class="col-lg-10 col-lg-offset-1 ">
+        <div class="col-lg-3 col-lg-offset-1">
+            <p>Total</p>
+        </div>
+        <div class="col-lg-2 col-lg-offset-6">
+            <p>1025 Dkk</p>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-10 col-lg-offset-1 ">
+        <div class="col-lg-3 col-lg-offset-4">
+            <label class="checkbox-inline"><input type="checkbox" value="active">Use registered card</label>
+        </div>
+        <div class="col-lg-3 ">
+            <label class="checkbox-inline"><input type="checkbox" value="">Paypal</label>
+        </div>
+
+        <div class="col-lg-12 flight_separator"></div>
+
+    </div>
+</div>
+<div class="col-lg-4  col-lg-offset-5">
+    <button class="btn btn-primary">Proceed to Payment</button>
+</div>
+<div class="col-lg-12 flight_separator"></div>
+
+
+        </div>
+      </div>
+
+
+
+
+    <!-- footer -->
+      <div class="panel-footer">
+        <p style="text-align:center; padding:15px;">Copyright &copy; Businesso 2016 Copenhagen</p>
+        <div id="footer" style="margin-top:-20px;">
+            <a href="#"> Contact </a>|
+            <a href="#"> FAQ </a>|
+            <a href="#"> About </a>
+        </div>
+    </div>
+    </div>
+
+  <!-- Modal for displaying user's info -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">MY PROFILE</h4>
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered">
+          <th>Name</th>
+          <th>Username</th>
+          <th>Password</th>
+          <tr>
+            <td id="displayedName"></td>
+            <td id="displayedEmail">3</td>
+            <td id="displayedPass"></td>
+          </tr>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" id="closeBtn">Close</button>
+      </div>
+    </div>
+
+<!-- jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+ <script src="js/script.min.js"></script>
+</body>
+</html>
