@@ -1,3 +1,6 @@
+<img width="1272" alt="screen shot 2016-11-17 at 19 42 20" src="https://cloud.githubusercontent.com/assets/19515308/20402691/fe9f8238-acfd-11e6-8d9c-69e344aed164.png">
+
+
 # Searching Flights - prototype
 Assignment: <br>
 Searching Flights - prototype <br>
